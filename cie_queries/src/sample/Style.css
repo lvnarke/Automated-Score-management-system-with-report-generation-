@@ -1,0 +1,65 @@
+
+
+.bg {
+    -fx-background-image:  url("screens/Login.png");
+     height: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+
+}
+
+
+.bg1{
+    -fx-background-image:  url("screens/home.png");
+    height: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.bg2{
+    -fx-background-image:  url("screens/home_active.png");
+    height: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.bg3{
+    -fx-background-image:  url("screens/Scan_select.png");
+    height: 100%;
+   /* -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;*/
+}
+.bg4{
+    -fx-background-image:  url("screens/Scan.png");
+    height: 100%;
+    /*-fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;*/
+}
+.bg5{
+    -fx-background-image:  url("screens/Reports.png");
+    height: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.bg6{
+    -fx-background-image:  url("screens/Reports_2.png");
+    height: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.tab {
+
+    -fx-pref-width: 250
+}
+.tab-header-background {
+    -fx-background-color:transparent
+}
+
+.tab-pane{
+    -fx-padding: 0 -1 -1 -1
+}

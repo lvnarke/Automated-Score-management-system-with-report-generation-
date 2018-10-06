@@ -1,8 +1,4 @@
-// This sample uses the following libraries:
-//  - Apache HTTP client (org.apache.httpcomponents:httpclient:4.5.5)
-//  - Apache HTTP core (org.apache.httpcomponents:httpccore:4.4.9)
-//  - JSON library (org.json:json:20180130).
-
+package sample;
 import java.io.File;
 import java.net.URI;
 import java.util.ArrayList;
@@ -25,7 +21,7 @@ import org.apache.http.util.EntityUtils;
 import org.apache.http.Header;
 import org.json.JSONObject;
 
-public class Main {
+public class Do_OCR {
     // **********************************************
     // *** Update or verify the following values. ***
     // **********************************************
@@ -45,7 +41,7 @@ public class Main {
     private static final String imageToAnalyze =
             "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/" +
                     "Cursive_Writing_on_Notebook_paper.jpg/800px-Cursive_Writing_on_Notebook_paper.jpg";
-    public static int src (ArrayList<String> al,String key)
+    public  int src (ArrayList<String> al,String key)
 
     { int count=0;
         for(String obj:al)
@@ -56,9 +52,9 @@ public class Main {
         }
         return -1;
     }
-    public static void main(String[] args) {
+    public  void do_OCR(String path) {
         //CloseableHttpClient httpTextClient = HttpClientBuilder.create().build();
-       // CloseableHttpClient httpResultClient = HttpClientBuilder.create().build();;
+        // CloseableHttpClient httpResultClient = HttpClientBuilder.create().build();;
         HttpClient httpTextClient = new DefaultHttpClient();
         HttpClient httpResultClient = new DefaultHttpClient();
         try {
@@ -81,14 +77,14 @@ public class Main {
             request.setHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
 
             // Request body.
-            System.out.println("Enter");
-            Scanner in = new Scanner(System.in);
-            String url=in.next();
+           // System.out.println("Enter");
+            //Scanner in = new Scanner(System.in);
+            String url=path;
             File file = new File(url);
             FileEntity reqEntity = new FileEntity(file, "application/octet-stream");
             request.setEntity(reqEntity);
             //StringEntity requestEntity =
-             //       new StringEntity("{\"url\":\"" + imageToAnalyze + "\"}");
+            //       new StringEntity("{\"url\":\"" + imageToAnalyze + "\"}");
             //request.setEntity(requestEntity);
 
             // Make the first REST API call to detect the text.
@@ -148,8 +144,8 @@ public class Main {
                 System.out.println(JsonPath.read(jsonString,"$.recognitionResult.lines[*].text").toString());
                 ArrayList al =new ArrayList();
                 al=JsonPath.read(jsonString,"$.recognitionResult.lines[*].text");
-           int pos=src(al,"Quiz - 1");
-              System.out.println("quiz 1 marks picked up"+al.get(pos+1));
+                int pos=src(al,"Quiz - 1");
+                System.out.println("quiz 1 marks picked up"+al.get(pos+1));
 
             }
         } catch (Exception e) {
