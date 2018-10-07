@@ -66,8 +66,8 @@
       <file leaf-file-name="Style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="105" column="24" lean-forward="false" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
+            <state relative-caret-position="470">
+              <caret line="141" column="28" lean-forward="false" selection-start-line="141" selection-start-column="28" selection-end-line="141" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -237,10 +237,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2409" />
-    <option name="y" value="-393" />
-    <option name="width" value="2418" />
-    <option name="height" value="1318" />
+    <option name="x" value="-2141" />
+    <option name="y" value="-121" />
+    <option name="width" value="1705" />
+    <option name="height" value="908" />
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
@@ -314,7 +314,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="E:/Downloads/Microsoft JDBC Driver 6.2 for SQL Server/sqljdbc_6.2/enu" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -482,15 +482,15 @@
       <workItem from="1538384139390" duration="3508000" />
       <workItem from="1538387662606" duration="12250000" />
       <workItem from="1538853650342" duration="1814000" />
-      <workItem from="1538855638023" duration="10376000" />
+      <workItem from="1538855638023" duration="15087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61088000" />
+    <option name="totallyTimeSpent" value="65799000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2409" y="-393" width="2418" height="1318" extended-state="6" />
+    <frame x="-2409" y="-105" width="2418" height="1318" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -975,8 +975,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="105" column="24" lean-forward="false" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
+        <state relative-caret-position="470">
+          <caret line="141" column="28" lean-forward="false" selection-start-line="141" selection-start-column="28" selection-end-line="141" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1015,7 +1015,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.37040442" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

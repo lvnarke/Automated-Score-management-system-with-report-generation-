@@ -29,5 +29,13 @@
          <font>
             <Font name="Open Sans Light" size="55.0" />
          </font></Label>
+      <ScrollPane hbarPolicy="NEVER" layoutX="955.0" layoutY="65.0" pannable="true" prefHeight="765.0" prefWidth="577.0" stylesheets="@Style.css" vbarPolicy="ALWAYS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1033.0" prefWidth="549.0" styleClass="sctest" stylesheets="@Style.css" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

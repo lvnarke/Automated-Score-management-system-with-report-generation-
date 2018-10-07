@@ -115,8 +115,51 @@
 
     -fx-border-radius: 0 0 17 17;
     -fx-background-radius: 0 0 17 17;
-
-
-
+}
+.sctest
+{
+    -fx-background-image:  url("screens/Sctest.png");
+    -fx-background-color: transperant;
+}
+.scroll-pane{
+    -fx-background-color: transperant;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-bar{
+    -fx-background-color: transparent;
 
 }
+.scroll-bar .increment-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+
+}
+.scroll-bar .thumb{
+    -fx-background-color:derive(white,50%);
+    -fx-background-insets: 4, 0, 0;
+    -fx-background-radius: 2em;
+}
+.scroll-bar .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+.scroll-bar .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+}
+.scroll-bar .increment-arrow{
+    -fx-shape: " ";
+    -fx-padding:0;
+
+}
+.scroll-bar .decrement-arrow{
+    -fx-shape: " ";
+    -fx-padding:0;
+}
+
