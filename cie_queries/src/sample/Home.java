@@ -49,7 +49,7 @@ public class Home  implements Initializable{
         stage3.close();
         System.out.println("Button pressed");
         Parent root = FXMLLoader.load(getClass().getResource("screen4.fxml"));
-        stage2.setScene(new Scene(root, 1108, 693));
+        stage2.setScene(new Scene(root, 1920, 1080));
         stage2.show();
 
     }
@@ -57,7 +57,7 @@ public class Home  implements Initializable{
         stage2.close();
         System.out.println("Button pressed");
         Parent root = FXMLLoader.load(getClass().getResource("screen5.fxml"));
-        stage3.setScene(new Scene(root, 1420, 700));
+        stage3.setScene(new Scene(root, 1920, 1080));
         stage3.show();
     }
 

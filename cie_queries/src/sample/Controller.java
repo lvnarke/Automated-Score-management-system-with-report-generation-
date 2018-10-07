@@ -14,8 +14,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Controller {
-    Connection conn;
-    Statement st = null;
+    //Connection conn;
+    //Statement st = null;
      Stage stage2 = new Stage();
     public TextField txt;
     public PasswordField pass;
@@ -23,8 +23,8 @@ public class Controller {
     public static String password="";
 
     public Controller(){
-        conn=sqlConnection.Connector(dbType.MYSQLDB);
-        if(conn ==null) System.exit(1);
+        //conn=sqlConnection.Connector(dbType.MYSQLDB);
+       // if(conn ==null) System.exit(1);
     }
     public void fun1(ActionEvent event) throws Exception {
         System.out.println("Button pressed");
@@ -32,13 +32,13 @@ public class Controller {
          password = pass.getText().toLowerCase();
         System.out.println(username+" "+password);
         Parent root = FXMLLoader.load(getClass().getResource("screen2.fxml"));
-        stage2.setScene(new Scene(root, 1420, 700));
+        stage2.setScene(new Scene(root, 1536, 808));
         stage2.show();
        // stage2.close();
     }
     public void find(String uname ,String pass) throws SQLException {
         String sql = "SELECT `first_name`, `last_name` FROM `cie`.`teacher` WHERE `username` is uname, `password` is pass";
-        ResultSet rs = conn.createStatement().executeQuery(sql);
+        //ResultSet rs = conn.createStatement().executeQuery(sql);
     }
 
 }
