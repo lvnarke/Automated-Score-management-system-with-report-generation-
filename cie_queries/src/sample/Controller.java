@@ -33,6 +33,7 @@ public class Controller {
         System.out.println(username+" "+password);
         Parent root = FXMLLoader.load(getClass().getResource("screen2.fxml"));
         stage2.setScene(new Scene(root, 1250, 653));
+        stage2.setResizable(false);
         stage2.show();
        // stage2.close();
     }

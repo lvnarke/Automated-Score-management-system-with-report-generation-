@@ -19,7 +19,7 @@
       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <AnchorPane maxHeight="653" maxWidth="1250.0" minHeight="653" minWidth="1250.0" prefHeight="653" prefWidth="1250.0" scaleShape="false" styleClass="bg1" stylesheets="@Style.css">
+      <AnchorPane maxHeight="653" maxWidth="1250.0" minHeight="653" minWidth="1250.0" prefHeight="653" prefWidth="1250.0" styleClass="bg1" stylesheets="@Style.css">
          <children>
             <Button fx:id="b4" layoutX="324.0" layoutY="343.0" mnemonicParsing="false" onAction="#fun4" opacity="0.0" prefHeight="292.0" prefWidth="405.0" text="Button">
                <cursor>
