@@ -95,7 +95,7 @@
 
     -fx-background-color:transperant;
     -fx-text-fill: #999999;
-    -fx-font-size: 30 px;
+    -fx-font-size: 25 px;
 
 
 }
@@ -103,8 +103,8 @@
     -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, white;
     -fx-background-color:transperant;
     -fx-text-fill: #999999;
-    -fx-padding: 15 0 15 40;
-    -fx-font-size: 30 px;
+
+    -fx-font-size: 25 px;
 
 }
 .combobox .list-view{
@@ -116,7 +116,53 @@
     -fx-border-radius: 0 0 17 17;
     -fx-background-radius: 0 0 17 17;
 
-
-
+}
+.sctest
+{
+    -fx-background-image:  url("screens/Sctest.png");
+    -fx-background-color: transperant;
+}
+.scroll-pane{
+    -fx-background-color: transperant;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+    -fx-padding: 10,20,30,40;
+}
+.scroll-bar{
+    -fx-background-color: transparent;
 
 }
+.scroll-bar .increment-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+
+}
+.scroll-bar .thumb{
+    -fx-background-color:derive(white,50%);
+    -fx-background-insets: 4, 0, 0;
+    -fx-background-radius: 2em;
+}
+.scroll-bar .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+.scroll-bar .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+}
+.scroll-bar .increment-arrow{
+    -fx-shape: " ";
+    -fx-padding:0;
+
+}
+.scroll-bar .decrement-arrow{
+    -fx-shape: " ";
+    -fx-padding:0;
+
+}
+
