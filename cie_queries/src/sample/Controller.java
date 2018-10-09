@@ -32,7 +32,7 @@ public class Controller {
          password = pass.getText().toLowerCase();
         System.out.println(username+" "+password);
         Parent root = FXMLLoader.load(getClass().getResource("screen2.fxml"));
-        stage2.setScene(new Scene(root, 1536, 808));
+        stage2.setScene(new Scene(root, 1250, 653));
         stage2.show();
        // stage2.close();
     }

@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Automated Score Management System");
-        primaryStage.setScene(new Scene(root, 1536, 808));
+        primaryStage.setScene(new Scene(root, 1250, 653));
 
         //Connection conn=sqlConnection.Connector(dbType.MYSQLDB);
 
