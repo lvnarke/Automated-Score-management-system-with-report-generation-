@@ -58,10 +58,10 @@ public class Controller {
             if(s1.equals(uname) && s1.equals(pass))
                 flag=2;
         }
-        if(flag==0){
+        /*if(flag==0){
             auxillary_flag=1;
            label.setText("Invalid Username or Password");
-        }
+        }*/
     }
 
 }

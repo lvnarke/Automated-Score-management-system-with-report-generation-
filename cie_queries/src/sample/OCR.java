@@ -22,6 +22,7 @@ public class OCR   {
     public JFXToggleButton tg1;
     public CheckBox cb1,cb2,cb3,cb4,cb5,cb6,cb7;
     static String ocrpath="";
+    public static boolean q1=false,q2=false,q3=false,t1=false,t2=false,t3=false,assgn=false;
 
     /*public void initialize(URL location, ResourceBundle resources) {
         lab1.setText(ocrpath);
@@ -29,9 +30,9 @@ public class OCR   {
     public void funn(ActionEvent event) throws Exception{
         System.out.println("Button pressed");
         ocrpath=txt2.getText();
-        if(tg1.isFocused() && var==false){
+        if( var==true){
             System.out.println(var);
-            var=true;
+            var=false;
             //cb1.
             cb1.setDisable(false);
             cb2.setDisable(false);
@@ -40,10 +41,32 @@ public class OCR   {
             cb5.setDisable(false);
             cb6.setDisable(false);
             cb7.setDisable(false);
+            cb1.setSelected(false);
+            cb2.setSelected(false);
+            cb3.setSelected(false);
+            cb4.setSelected(false);
+            cb5.setSelected(false);
+            cb6.setSelected(false);
+            cb7.setSelected(false);
+
+            q1=cb1.isSelected();
+            q2=cb2.isSelected();
+            q3=cb3.isSelected();
+            t1=cb4.isSelected();
+            t2=cb5.isSelected();
+            t3=cb6.isSelected();
+            assgn=cb7.isSelected();
         }
-        if(tg1.isFocused() && var==true){
+        else if( var==false){
             System.out.println(var);
-            var=false;
+            var=true;
+            cb1.setSelected(true);
+           cb2.setSelected(true);
+           cb3.setSelected(true);
+           cb4.setSelected(true);
+           cb5.setSelected(true);
+           cb6.setSelected(true);
+           cb7.setSelected(true);
             cb1.setDisable(true);
             cb2.setDisable(true);
             cb3.setDisable(true);
