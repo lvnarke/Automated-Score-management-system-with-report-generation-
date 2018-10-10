@@ -4,10 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
@@ -21,6 +18,7 @@ public class Controller {
      Stage stage2 = new Stage();
     public TextField txt;
     public PasswordField pass;
+    public Label label;
     public int flag=0,auxillary_flag=0;
     public static String username="";
     public static String password="";
@@ -60,11 +58,10 @@ public class Controller {
             if(s1.equals(uname) && s1.equals(pass))
                 flag=2;
         }
-        /*if(flag==0){
+        if(flag==0){
             auxillary_flag=1;
-            Dialog d = new Alert(Alert.AlertType.INFORMATION, "Incorrect Username or Password");
-            d.show();
-        }*/
+           label.setText("Invalid Username or Password");
+        }
     }
 
 }
