@@ -35,7 +35,7 @@ public class Home  implements Initializable{
         comboBox.getItems().removeAll(comboBox.getItems());
         comboBox.getItems().addAll("V Sem A Section ", "III Sem B Section", "I Sem C Section");
         comboBox.getSelectionModel().select("V Sem A Section ");
-        lb1.setText(Controller.username);
+        lb1.setText(Controller.username.toUpperCase());
         //Main m = new Main();
     }
 
@@ -49,7 +49,7 @@ public class Home  implements Initializable{
         stage3.close();
         System.out.println("Button pressed");
         Parent root = FXMLLoader.load(getClass().getResource("screen4.fxml"));
-        stage2.setScene(new Scene(root, 1161, 653));
+        stage2.setScene(new Scene(root, 1108, 693));
         stage2.show();
 
     }
