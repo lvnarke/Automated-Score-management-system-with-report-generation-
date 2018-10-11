@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane prefHeight="600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -18,7 +18,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-      <Pane maxHeight="653" maxWidth="1250" minHeight="653" minWidth="1250" prefHeight="653" prefWidth="1250" scaleShape="false" styleClass="bg" >
+      <Pane maxHeight="653" maxWidth="1250" minHeight="653" minWidth="1250" prefHeight="653" prefWidth="1250" scaleShape="false" styleClass="bg">
          <children>
                   <TextField fx:id="txt" layoutX="427.0" layoutY="337.0" prefHeight="20.0" prefWidth="411.0" promptText="Username" styleClass="txtbg">
                      <font>
@@ -30,7 +30,7 @@
                         <Font name="Open Sans Light" size="25.0" />
                      </font>
                   </PasswordField>
-                  <Button fx:id="b1" layoutX="775.0" layoutY="461.0" mnemonicParsing="false" onAction="#fun1" opacity="0.0" prefHeight="54.0" prefWidth="51.0" text="Button">
+                  <Button fx:id="b1" layoutX="776.0" layoutY="461.0" mnemonicParsing="false" onAction="#fun1" opacity="0.0" prefHeight="54.0" prefWidth="51.0" text="Button">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
