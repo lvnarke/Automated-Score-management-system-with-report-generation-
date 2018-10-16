@@ -142,7 +142,7 @@ public class Do_OCR {
                 System.out.println("Text recognition result response: \n");
                 //System.out.println(json.toString(2));
                 System.out.println(JsonPath.read(jsonString,"$.recognitionResult.lines[*].text").toString());
-                ArrayList al =new ArrayList();
+                ArrayList<String> al =new ArrayList<String>();
                 al=JsonPath.read(jsonString,"$.recognitionResult.lines[*].text");
                 int pos=src(al,"Quiz - 1");
                 System.out.println("quiz 1 marks picked up"+al.get(pos+1));
