@@ -11,5 +11,6 @@
     <orderEntry type="library" exported="" name="com.jayway.jsonpath:json-path:2.3.0" level="application" />
     <orderEntry type="library" exported="" name="org.apache.httpcomponents:httpclient:4.2.4" level="application" />
     <orderEntry type="library" exported="" name="org.json:json:20170516" level="application" />
+    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.1" level="project" />
   </component>
 </module>
