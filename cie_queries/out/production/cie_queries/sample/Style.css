@@ -1,15 +1,10 @@
-
-
 .bg {
     -fx-background-image:  url("screens/Login.png");
      height: 100%;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
-
 }
-
-
 .bg1{
     -fx-background-image:  url("screens/home.png");
     height: 100%;
@@ -53,24 +48,17 @@
     -fx-background-size: cover;
 }
 .tab {
-
     -fx-pref-width: 250
 }
 .tab-header-background {
     -fx-background-color:transparent
 }
-
 .tab-pane{
     -fx-padding: 0 -1 -1 -1
 }
-
-
-
 .blue{
     -fx-background-color:Red ;
-
 }
-
 .txtbg{
     -fx-background-color:transperant;
     -fx-text-fill: #999999;
@@ -78,44 +66,33 @@
 .text-area {
     -fx-background-color: rgba(0,0,0,0);
 }
-
 .text-area .scroll-pane {
     -fx-background-color: transparent;
 }
-
 .text-area .scroll-pane .viewport{
     -fx-background-color: transparent;
 }
-
-
 .text-area .scroll-pane .content{
     -fx-background-color: transparent;
 }
 .combobox{
-
     -fx-background-color:transperant;
     -fx-text-fill: #999999;
     -fx-font-size: 25 px;
-
-
 }
 .combobox .list-cell{
     -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, white;
     -fx-background-color:transperant;
     -fx-text-fill: #999999;
-
     -fx-font-size: 25 px;
-
 }
 .combobox .list-view{
 
     -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, white;
     -fx-font-size: 25 px;
     -fx-border-color:transperant;
-
     -fx-border-radius: 0 0 17 17;
     -fx-background-radius: 0 0 17 17;
-
 }
 .sctest
 {
@@ -131,7 +108,6 @@
 }
 .scroll-bar{
     -fx-background-color: transparent;
-
 }
 .scroll-bar .increment-button{
     -fx-background-color:transparent;
@@ -158,46 +134,42 @@
 .scroll-bar .increment-arrow{
     -fx-shape: " ";
     -fx-padding:0;
-
 }
 .scroll-bar .decrement-arrow{
     -fx-shape: " ";
     -fx-padding:0;
-
 }
 
 .tab-pane .tab-header-area .tab-header-background {
     -fx-opacity: 0;
+    -fx-pref-height: 60px;
 }
 
 .tab-pane
 {
-    -fx-tab-min-width:30px;
+    -fx-pref-height: 60px;
 }
-
-.tab{
-    -fx-background-insets: 0 1 0 1,0,0;
+.tab
+{
+    -fx-max-width: 210px;
+    -fx-pref-width: 210px;
+    -fx-pref-height: 60px;
 }
 .tab-pane .tab
 {
-    -fx-background-color: #e6e6e6;
-
-}
-
-.tab-pane .tab:selected
-{
-    -fx-background-color: #3c3c3c;
+    -fx-background-color: transperant;
+    -fx-pref-height: 60px;
 }
 
 .tab .tab-label {
-    -fx-alignment: CENTER;
-    -fx-text-fill: #828282;
-    -fx-font-size: 12px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
     -fx-font-weight: bold;
+    -fx-pref-height: 60px;
+    -fx-min-height: 60px;
+    -fx-font-family: "Saira Medium";
 }
 
-.tab:selected .tab-label {
-    -fx-alignment: CENTER;
-    -fx-text-fill: #96b946;
-}
 

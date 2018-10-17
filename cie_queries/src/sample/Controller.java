@@ -13,8 +13,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Controller {
-    Connection conn;
-    Statement st = null;
+   // Connection conn;
+   // Statement st = null;
      Stage stage2 = new Stage();
     public TextField txt;
     public PasswordField pass;
@@ -24,14 +24,14 @@ public class Controller {
     public static String password="";
 
     public Controller(){
-        conn=sqlConnection.Connector(dbType.MYSQLDB);
-        if(conn ==null) System.exit(1);
+       // conn=sqlConnection.Connector(dbType.MYSQLDB);
+       // if(conn ==null) System.exit(1);
     }
     public void fun1(ActionEvent event) throws Exception {
         System.out.println("Button pressed");
          username=txt.getText().toLowerCase();
          password = pass.getText().toLowerCase();
-         find(username,password);
+         //find(username,password);
         System.out.println(username+" "+password);
       if(auxillary_flag==0) {
           Parent root = FXMLLoader.load(getClass().getResource("screen2.fxml"));
@@ -41,7 +41,7 @@ public class Controller {
       }
        // stage2.close();
     }
-    public void find(String uname ,String pass) throws SQLException {
+   /* public void find(String uname ,String pass) throws SQLException {
         String sql = "SELECT * FROM `cie`.`teacher`";
         ResultSet rs = conn.createStatement().executeQuery(sql);
         while(rs.next()){
@@ -58,10 +58,10 @@ public class Controller {
             if(s1.equals(uname) && s1.equals(pass))
                 flag=2;
         }
-        /*if(flag==0){
+        if(flag==0){
             auxillary_flag=1;
            label.setText("Invalid Username or Password");
-        }*/
-    }
+        }
+    }*/
 
 }

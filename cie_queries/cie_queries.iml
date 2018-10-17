@@ -7,10 +7,27 @@
     </content>
     <orderEntry type="jdk" jdkName="9.0" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="mysql-connector-java-8.0.11" level="project" />
     <orderEntry type="library" exported="" name="com.jayway.jsonpath:json-path:2.3.0" level="application" />
     <orderEntry type="library" exported="" name="org.apache.httpcomponents:httpclient:4.2.4" level="application" />
-    <orderEntry type="library" exported="" name="org.json:json:20170516" level="application" />
     <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.1" level="project" />
+    <orderEntry type="library" exported="" name="org.json:json:20170516" level="application" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../jar_files/mysql-connector-java-8.0.11.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../jar_files/jfoenix-9.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
