@@ -52,12 +52,12 @@ public class OCR   {
             System.out.println(var);
             var=true;
             cb1.setSelected(true);
-           cb2.setSelected(true);
-           cb3.setSelected(true);
-           cb4.setSelected(true);
-           cb5.setSelected(true);
-           cb6.setSelected(true);
-           cb7.setSelected(true);
+            cb2.setSelected(true);
+            cb3.setSelected(true);
+            cb4.setSelected(true);
+            cb5.setSelected(true);
+            cb6.setSelected(true);
+            cb7.setSelected(true);
             cb1.setDisable(true);
             cb2.setDisable(true);
             cb3.setDisable(true);

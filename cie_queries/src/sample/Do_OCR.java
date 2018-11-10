@@ -4,8 +4,18 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.jayway.jsonpath.JsonPath;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -27,6 +37,9 @@ public class Do_OCR {
     // **********************************************
 
     // Replace <Subscription Key> with your valid subscription key.
+
+    static  Stage stage2 = new Stage();
+
     private static final String subscriptionKey = "7c9a6a30f1d44f1692c6635f2e1c7e6c";
 
     // You must use the same region in your REST call as you used to get your
@@ -41,6 +54,14 @@ public class Do_OCR {
     private static final String imageToAnalyze =
             "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/" +
                     "Cursive_Writing_on_Notebook_paper.jpg/800px-Cursive_Writing_on_Notebook_paper.jpg";
+    public static    Float quiz_1,quiz_2,quiz_3,test_1,test_2,test_3,assignment,lab,selfstudy;
+
+    public static String usn="",ccode="";
+
+    public static String reg1="1rv16cs[0-9][0-9][0-9]",reg2="16cs[0-9][0-9]";
+    static String e1="",e2="",e3="",e4="";
+    public static boolean b1=true,b2=true,b3=true,b4=true,b5=true,b6=true,b7=true;
+
     public  int src (ArrayList<String> al,String key)
 
     { int count=0;
@@ -118,7 +139,8 @@ public class Do_OCR {
                 System.out.println("\nError retrieving Operation-Location.\nExiting.");
                 System.exit(1);
             }
-
+           // Dialog d = new Alert(Alert.AlertType.INFORMATION, "Wait for some time to retrieve the recognized text.");
+            //d.show();
             // Note: The response may not be immediately available. Handwriting
             // recognition is an asynchronous operation, which takes a variable
             // amount of time dependent on the length of the text analyzed. You
@@ -137,18 +159,143 @@ public class Do_OCR {
 
             if (responseEntity != null) {
                 // Format and display the JSON response.
+
                 String jsonString = EntityUtils.toString(responseEntity);
                 JSONObject json = new JSONObject(jsonString);
                 System.out.println("Text recognition result response: \n");
                 //System.out.println(json.toString(2));
                 System.out.println(JsonPath.read(jsonString,"$.recognitionResult.lines[*].text").toString());
                 ArrayList<String> al =new ArrayList<String>();
+
                 al=JsonPath.read(jsonString,"$.recognitionResult.lines[*].text");
-                int pos=src(al,"Quiz - 1");
-                System.out.println("quiz 1 marks picked up"+al.get(pos+1));
+                System.out.println("Here now");
+                int pos=0;
+
+
+                    usn="1rv16cs004";
+
+                    ccode="16cs54";
+                    pos=src(al,"Quiz - 1");
+                    quiz_1=Float.parseFloat(""+al.get(pos+2));
+
+                    pos=src(al,"Quiz - 2");
+                    quiz_2=Float.parseFloat(""+al.get(pos+2));
+
+                    pos=src(al,"Quiz - 3");
+                    quiz_3=Float.parseFloat(""+al.get(pos+2));
+
+                    pos=src(al,"Test - 1");
+                    test_1=Float.parseFloat(""+al.get(pos+1));
+
+                    pos=src(al,"Test - 2");
+                    test_2=Float.parseFloat(""+al.get(pos+1));
+
+                    pos=src(al,"Test - 3");
+                    test_3=Float.parseFloat(""+al.get(pos+1));
+
+                    pos=src(al,"Selfstudy");
+                    selfstudy=Float.parseFloat(""+al.get(pos+2));
+
+                    pos=src(al,"Assignment");
+                    assignment=Float.parseFloat(""+al.get(pos+1));
+
+                    pos=src(al,"Laboratory");
+                    lab=Float.parseFloat(""+al.get(pos+1));
+
+                    System.out.println("I'm printing this: "+quiz_1+" "+quiz_2+" "+quiz_3+" "+test_1+" "+test_2+" "+test_3+" "+assignment+" "+selfstudy+" "+lab);
+
+
+
+                Insert insert = new Insert();
+
+                usn=usn.toLowerCase();
+                ccode=ccode.toLowerCase();
+
+                Pattern pat=Pattern.compile(reg1);
+                Matcher matcher = pat.matcher(usn);
+
+               Pattern pat1 = Pattern.compile(reg2);
+               Matcher matcher1 = pat1.matcher(ccode);
+
+                b1=matcher.matches();
+                b2=matcher1.matches();
+                //boolean b1=true,b2=true;
+
+
+
+
+                if(!b1){
+                    //text_usn.setDisable(false);
+
+                }
+
+                if(!b2){
+                    //text_ccode.setDisable(false);
+                }
+
+                if(quiz_1>10 || quiz_2 >10|| quiz_3 >10)
+                { b3=false;
+                    //text_q1.setDisable(false);
+                    //text_q2.setDisable(false);
+                   // text_q3.setDisable(false);
+
+                }
+                if((test_1 > 25 || test_2 >25 || test_3 >25 )&&( assignment > 0)) {
+                    b4 = false;
+                    //text_t1.setDisable(false);
+                   // text_t2.setDisable(false);
+                    //text_t3.setDisable(false);
+                }
+                if(lab >50){
+                    b5=false;
+                    //text_lab.setDisable(false);
+                }
+                if(selfstudy>20){
+                    b6=false;
+                   // text_ss.setDisable(false);
+                }
+                if(assignment >10){
+                    b7=false;
+                   //text_assgn.setDisable(false);
+                }
+                if(!b1){
+                    //System.out.println("Incorrect USN");
+                    e1+="Incorrect USN.Re-enter USN"+"\n";
+                }
+                if(!b2){
+                   // System.out.println("Incorrect Course-code");
+                    e2+="Incorrect Course-code.Re-enter Course-code"+"\n";
+                }
+                if(!b3){
+                   // System.out.println("Incorrect Quiz marks");
+                    e3+="Incorrect Quiz marks.Re-enter Quiz marks"+"\n";
+                }
+                if(!b4){
+                    e4+="Incorrect Test marks.Re-enter Test marks"+"\n";
+                }
+                System.out.println("Printing the flags: "+b1+" "+b2+" "+b3+" "+b4+" "+b5+" "+b6+" "+b7);
+                if(b1==false || b2==false|| b3==false || b4==false || b5==false || b6==false || b7==false){
+                    Parent root = FXMLLoader.load(getClass().getResource("error.fxml"));
+                    stage2.setScene(new Scene(root, 1250, 653));
+                    stage2.setResizable(false);
+                    stage2.show();
+                }
+                //Error error = new Error();
+                //error.do_fun();
+
+               if(b1 && b2 && b3 && b4 && b5 && b6 && b7){
+                insert.insertintoquiz(usn,ccode,quiz_1,quiz_2,quiz_3);
+                insert.insertintotest(usn,ccode,test_1,test_2,test_3);
+                insert.insertintoassgn(ccode, usn, assignment, lab,selfstudy);
+                System.out.println("Inserted");
+                }
+               // Dialog d1 = new Alert(Alert.AlertType.INFORMATION, "Data successfully injected into the database");
+                //d1.show();
+
 
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println(e.getMessage());
 
         }

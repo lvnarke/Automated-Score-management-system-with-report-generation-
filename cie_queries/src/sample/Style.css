@@ -177,27 +177,32 @@
 
 .tab{
     -fx-background-insets: 0 1 0 1,0,0;
+    -fx-background-color: transperant;
 }
 .tab-pane .tab
 {
     -fx-background-color: #e6e6e6;
+    -fx-pref-width: 415;
+    -fx-pref-height: 200;
 
 }
 
 .tab-pane .tab:selected
-{
-    -fx-background-color: #3c3c3c;
+{-fx-pref-width: 415;
+    -fx-pref-height: 200;
+    -fx-background-color: transperant;
 }
 
 .tab .tab-label {
+
     -fx-alignment: CENTER;
-    -fx-text-fill: #828282;
-    -fx-font-size: 12px;
+    -fx-text-fill: white;
+    -fx-font-size: 30 px;
     -fx-font-weight: bold;
 }
 
 .tab:selected .tab-label {
     -fx-alignment: CENTER;
-    -fx-text-fill: #96b946;
+    -fx-text-fill: white;
 }
 

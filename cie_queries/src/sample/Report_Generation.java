@@ -10,10 +10,7 @@ import javafx.stage.Stage;
 public class Report_Generation {
 
 
-   /*tab1.setTabMinWidth(33);
-    tab1.setTabMinHeight(33);
-    tab1.setTabMaxWidth(69);
-    tab1.setTabMaxHeight(69);*/
+
    Stage stage2 = new Stage();
    Stage stage3 = new Stage();
    public void btn1_fun(ActionEvent event) throws Exception {

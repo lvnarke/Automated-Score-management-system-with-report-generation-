@@ -5,29 +5,34 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1420.0" styleClass="bg5" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Report_Generation">
+<Pane maxHeight="653" maxWidth="1267.0" minHeight="653" minWidth="1267.0" prefHeight="653" prefWidth="1267.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Report_Generation">
    <children>
-      <Button fx:id="btn1" layoutX="239.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn1_fun" opacity="0.0" prefHeight="83.0" prefWidth="234.0" text="Button" />
-      <Label layoutX="102.0" layoutY="130.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
-      <Label layoutX="102.0" layoutY="219.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
-      <Label layoutX="110.0" layoutY="314.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
-      <Label layoutX="102.0" layoutY="407.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
-      <Label layoutX="102.0" layoutY="501.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
-      <Label layoutX="110.0" layoutY="591.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
-      <TabPane layoutX="14.0" layoutY="19.0" prefHeight="200.0" prefWidth="200.0" styleClass="tab" stylesheets="@Style.css" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab styleClass="tab-pane" text="Untitled Tab 1">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="175.0" prefWidth="309.0" />
-            </content>
-          </Tab>
-          <Tab styleClass="tab-pane" text="Untitled Tab 2">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
-        </tabs>
-      </TabPane>
+      <AnchorPane prefHeight="664.0" prefWidth="1267.0" styleClass="bg5" stylesheets="@Style.css">
+         <children>
+            <Button fx:id="btn1" layoutX="239.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn1_fun" opacity="0.0" prefHeight="83.0" prefWidth="234.0" text="Button" />
+            <Label layoutX="102.0" layoutY="130.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
+            <Label layoutX="102.0" layoutY="219.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
+            <Label layoutX="110.0" layoutY="314.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
+            <Label layoutX="102.0" layoutY="407.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
+            <Label layoutX="102.0" layoutY="501.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
+            <Label layoutX="110.0" layoutY="591.0" prefHeight="73.0" prefWidth="353.0" text="Label" />
+            <TabPane layoutX="14.0" layoutY="19.0" prefHeight="200.0" prefWidth="414.0" styleClass="tab" stylesheets="@Style.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab styleClass="tab-pane" text="Individual">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="175.0" prefWidth="335.0" />
+                  </content>
+                </Tab>
+                <Tab styleClass="tab-pane" text="Untitled Tab 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</Pane>
