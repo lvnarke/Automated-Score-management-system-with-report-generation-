@@ -62,7 +62,7 @@ public class Home  implements Initializable{
         comboBox.getItems().addAll("V Sem A Section ", "III Sem B Section", "I Sem C Section");
         comboBox.getSelectionModel().select("V Sem A Section ");
         lb1.setText(Controller.username.toUpperCase());
-        String id="1RVTR001";// id has to be set with the usn or primary key
+        String id=Controller.username;// id has to be set with the usn or primary key
         notifdb con =new notifdb();
         con.collection=con.database.getCollection(id);
         con.get_Msgs(con.collection);
