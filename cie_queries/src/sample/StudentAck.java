@@ -6,6 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.TextArea;
+import sample.screens.notifdb;
 
 
 import java.net.URL;
@@ -27,16 +28,20 @@ public class StudentAck implements Initializable {
         picker.getSelectionModel().select("Select Teacher ID ");
 
     }
-    public void selection(){
+    public String selection(){
         picker.getSelectionModel();
         String sel=(String)picker.getValue();
         System.out.println(sel);
+        return sel;
     }
     public void send(ActionEvent event){
         String message=msg.getText();
         System.out.println("This message is to be sent: "+message);
         Dialog d = new Alert(Alert.AlertType.INFORMATION, "Message Sent Sucessfully");
         d.show();
+        notifdb con =new notifdb();
+        con.collection=con.database.getCollection(selection());
+        con.send_Msg(con.collection,Controller.username,message);
         StudentHome.stage4.close();
     }
 

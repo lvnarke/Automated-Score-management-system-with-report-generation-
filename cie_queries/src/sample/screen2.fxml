@@ -21,7 +21,7 @@
    <children>
       <AnchorPane maxHeight="653" maxWidth="1250.0" minHeight="653" minWidth="1250.0" prefHeight="653" prefWidth="1250.0" styleClass="bg1" stylesheets="@Style.css">
          <children>
-            <Button fx:id="b4" layoutX="324.0" layoutY="343.0" mnemonicParsing="false" onAction="#fun4" opacity="0.0" prefHeight="292.0" prefWidth="405.0" text="Button">
+            <Button fx:id="b4" layoutX="324.0" layoutY="343.0" mnemonicParsing="false" onAction="#chromeapi" opacity="0.0" prefHeight="292.0" prefWidth="405.0" text="Button">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -46,7 +46,79 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1500.0" prefWidth="437.0" styleClass="sctest" stylesheets="@Style.css" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="925.0" prefWidth="437.0" styleClass="sctest" stylesheets="@Style.css">
+                     <children>
+                        <Label id="l1" fx:id="n1" layoutX="99.0" layoutY="18.0" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="m1" fx:id="msg1" alignment="TOP_LEFT" layoutX="99.0" layoutY="54.0" prefHeight="46.0" prefWidth="329.0" text="Text is coming for the win here and dtays here sapmle text also bleh blej" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Roboto" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="l1" fx:id="n2" layoutX="99.0" layoutY="114.0" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="l1" fx:id="n3" layoutX="99.0" layoutY="223.0" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="m1" fx:id="msg2" alignment="TOP_LEFT" layoutX="99.0" layoutY="149.0" prefHeight="46.0" prefWidth="329.0" text="Text is coming for the win here and dtays here sapmle text also bleh blej" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Roboto" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="m1" fx:id="msg3" alignment="TOP_LEFT" layoutX="99.0" layoutY="261.0" prefHeight="46.0" prefWidth="329.0" text="Text is coming for the win here and dtays here sapmle text also bleh blej" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Roboto" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="m1" fx:id="msg4" alignment="TOP_LEFT" layoutX="99.0" layoutY="367.0" prefHeight="46.0" prefWidth="329.0" text="Text is coming for the win here and dtays here sapmle text also bleh blej" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Roboto" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="m1" fx:id="msg5" alignment="TOP_LEFT" layoutX="99.0" layoutY="472.0" prefHeight="46.0" prefWidth="329.0" text="Text is coming for the win here and dtays here sapmle text also bleh blej" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Roboto" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="m1" fx:id="msg6" alignment="TOP_LEFT" layoutX="99.0" layoutY="579.0" prefHeight="46.0" prefWidth="329.0" text="Text is coming for the win here and dtays here sapmle text also bleh blej" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Roboto" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="m1" fx:id="msg7" alignment="TOP_LEFT" layoutX="99.0" layoutY="685.0" prefHeight="46.0" prefWidth="329.0" text="Text is coming for the win here and dtays here sapmle text also bleh blej" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Roboto" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label id="l1" fx:id="n4" layoutX="99.0" layoutY="329.0" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="l1" fx:id="n5" layoutX="99.0" layoutY="434.0" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="l1" fx:id="n6" layoutX="99.0" layoutY="542.0" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="l1" fx:id="n7" layoutX="99.0" layoutY="648.0" text="Label" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto" size="24.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
                </content>
             </ScrollPane>
          </children>

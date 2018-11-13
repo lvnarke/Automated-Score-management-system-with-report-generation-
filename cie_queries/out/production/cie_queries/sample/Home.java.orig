@@ -30,6 +30,8 @@ public class Home  implements Initializable{
     Statement st = null;
     public ComboBox comboBox;
     public Label lb1;
+<<<<<<< HEAD
+=======
     public Label n1;
     public Label n2;
     public Label n3;
@@ -45,6 +47,7 @@ public class Home  implements Initializable{
     public Label msg6;
     public Label msg7;
 
+>>>>>>> master_1
 
    /* ObservableList<String> options =
 
@@ -57,12 +60,25 @@ public class Home  implements Initializable{
 
 
 
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources)  {
+
+        int i=0;
         comboBox.getItems().removeAll(comboBox.getItems());
+<<<<<<< HEAD
+      // comboBox.getItems().addAll("V Sem A Section ", "III Sem B Section", "I Sem C Section");
+        while(i < Controller.arrayList.size()){
+            //System.out.println(Controller.arrayList.get(i));
+            comboBox.getItems().add(""+Controller.arrayList.get(i));
+            i++;
+        }
+       comboBox.getSelectionModel().select("Select Section");
+       lb1.setText(Controller.first_name.toUpperCase());
+       // lb1.setText(Controller.username.toUpperCase());
+=======
         comboBox.getItems().addAll("V Sem A Section ", "III Sem B Section", "I Sem C Section");
         comboBox.getSelectionModel().select("V Sem A Section ");
         lb1.setText(Controller.username.toUpperCase());
-        String id="1RVTR001";// id has to be set with the usn or primary key
+        String id="lakshmi";// id has to be set with the usn or primary key
         notifdb con =new notifdb();
         con.collection=con.database.getCollection(id);
         con.get_Msgs(con.collection);
@@ -81,17 +97,8 @@ public class Home  implements Initializable{
         msg6.setText(con.Msglist.get(5));
         msg7.setText(con.Msglist.get(6));
 
-        int i=0;
-        comboBox.getItems().removeAll(comboBox.getItems());
-      // comboBox.getItems().addAll("V Sem A Section ", "III Sem B Section", "I Sem C Section");
-        while(i < Controller.arrayList.size()){
-            //System.out.println(Controller.arrayList.get(i));
-            comboBox.getItems().add(""+Controller.arrayList.get(i));
-            i++;
-        }
-       comboBox.getSelectionModel().select("Select Section");
-       lb1.setText(Controller.first_name.toUpperCase());
-       // lb1.setText(Controller.username.toUpperCase());
+
+>>>>>>> master_1
         //Main m = new Main();
     }
 
@@ -122,7 +129,7 @@ public class Home  implements Initializable{
     {
         Desktop d= Desktop.getDesktop();
         try{
-            d.browse(new URI("https://app.powerbi.com/groups/me/reports/18f4e9f0-2183-4011-a6df-120ffcb217d6/ReportSection"));
+            d.browse(new URI("https://app.powerbi.com/groups/me/reports/9af94c13-530a-4773-82c6-5012f8b534dd/ReportSection362b06cab2c677099aa5"));
         }
         catch (java.net.URISyntaxException e)
         {}

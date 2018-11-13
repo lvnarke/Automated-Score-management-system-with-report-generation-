@@ -17,6 +17,13 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
+.bgstud{
+    -fx-background-image:  url("screens/bgstud.png");
+    height: 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
 .bg2{
     -fx-background-image:  url("screens/home_active.png");
     height: 100%;

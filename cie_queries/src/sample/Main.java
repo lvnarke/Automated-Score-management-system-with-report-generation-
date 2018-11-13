@@ -6,7 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-//import java.sql.Connection;
+import java.sql.Connection;
+
+
 
 public class Main extends Application {
 
@@ -17,13 +19,13 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 1250, 653));
         primaryStage.setResizable(false);
 
-        //Connection conn=sqlConnection.Connector(dbType.MYSQLDB);
+        Connection conn=sqlConnection.Connector(dbType.MYSQLDB);
 
-       // System.out.println(conn);
-       // if(conn == null)
-       //     System.out.println("Connection failed");
-       // else
-       //     System.out.println("Connection sucessfull");
+        System.out.println(conn);
+        if(conn == null)
+           System.out.println("Connection failed");
+       else
+            System.out.println("Connection sucessfull");
         primaryStage.show();
 
 
