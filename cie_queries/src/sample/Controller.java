@@ -16,8 +16,8 @@ import java.util.ArrayList;
 public class Controller {
     Connection conn;
     Statement st = null;
-     Stage stage2 = new Stage();
-     Stage stage3 = new Stage();
+    static Stage stage7 = new Stage();
+    static Stage stage8 = new Stage();
     public TextField txt;
     public PasswordField pass;
     public Label label;
@@ -48,15 +48,15 @@ public class Controller {
         }
       if(flag==1) {
           Parent root = FXMLLoader.load(getClass().getResource("screen2.fxml"));
-          stage2.setScene(new Scene(root, 1250, 653));
-          stage2.setResizable(false);
-          stage2.show();
+          stage7.setScene(new Scene(root, 1250, 653));
+          stage7.setResizable(false);
+          stage7.show();
       }
       else if(flag==2){
           Parent root = FXMLLoader.load(getClass().getResource("student.fxml"));
-          stage3.setScene(new Scene(root, 1250, 653));
-          stage3.setResizable(false);
-          stage3.show();
+          stage8.setScene(new Scene(root, 1250, 653));
+          stage8.setResizable(false);
+          stage8.show();
       }
 
        // stage2.close();

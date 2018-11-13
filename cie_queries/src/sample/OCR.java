@@ -13,14 +13,14 @@ public class OCR   {
     public JFXToggleButton tg1;
     public CheckBox cb1,cb2,cb3,cb4,cb5,cb6,cb7;
     static String ocrpath="";
-    public static boolean q1=false,q2=false,q3=false,t1=false,t2=false,t3=false,assgn=false;
+    public static boolean q1=true,q2=true,q3=true,t1=true,t2=true,t3=true,assgn=true;
 
     /*public void initialize(URL location, ResourceBundle resources) {
         lab1.setText(ocrpath);
     }*/
     public void funn(ActionEvent event) throws Exception{
         System.out.println("Button pressed");
-        ocrpath=txt2.getText();
+
         if( var==true){
             System.out.println(var);
             var=false;
@@ -70,8 +70,11 @@ public class OCR   {
 
     }
     public void button_fun(ActionEvent event) throws Exception{
+
         System.out.println("Button pressed");
+        ocrpath=txt2.getText();
         Do_OCR obj = new Do_OCR();
         obj.do_OCR(ocrpath);
+        Home.stage2.close();
     }
 }

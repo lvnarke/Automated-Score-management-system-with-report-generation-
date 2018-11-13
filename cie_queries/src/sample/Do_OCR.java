@@ -219,44 +219,28 @@ public class Do_OCR {
 
                 b1=matcher.matches();
                 b2=matcher1.matches();
-                //boolean b1=true,b2=true;
 
-
-
-
-                if(!b1){
-                    //text_usn.setDisable(false);
-
-                }
-
-                if(!b2){
-                    //text_ccode.setDisable(false);
-                }
 
                 if(quiz_1>10 || quiz_2 >10|| quiz_3 >10)
                 { b3=false;
-                    //text_q1.setDisable(false);
-                    //text_q2.setDisable(false);
-                   // text_q3.setDisable(false);
+
 
                 }
                 if((test_1 > 25 || test_2 >25 || test_3 >25 )&&( assignment > 0)) {
                     b4 = false;
-                    //text_t1.setDisable(false);
-                   // text_t2.setDisable(false);
-                    //text_t3.setDisable(false);
+
                 }
                 if(lab >50){
                     b5=false;
-                    //text_lab.setDisable(false);
+
                 }
                 if(selfstudy>20){
                     b6=false;
-                   // text_ss.setDisable(false);
+
                 }
                 if(assignment >10){
                     b7=false;
-                   //text_assgn.setDisable(false);
+
                 }
                 if(!b1){
                     //System.out.println("Incorrect USN");
@@ -280,17 +264,10 @@ public class Do_OCR {
                     stage2.setResizable(false);
                     stage2.show();
                 }
-                //Error error = new Error();
-                //error.do_fun();
 
-               if(b1 && b2 && b3 && b4 && b5 && b6 && b7){
-                insert.insertintoquiz(usn,ccode,quiz_1,quiz_2,quiz_3);
-                insert.insertintotest(usn,ccode,test_1,test_2,test_3);
-                insert.insertintoassgn(ccode, usn, assignment, lab,selfstudy);
-                System.out.println("Inserted");
-                }
-               // Dialog d1 = new Alert(Alert.AlertType.INFORMATION, "Data successfully injected into the database");
-                //d1.show();
+
+
+
 
 
             }

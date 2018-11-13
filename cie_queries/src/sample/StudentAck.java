@@ -2,7 +2,9 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.TextArea;
 
 
@@ -33,6 +35,9 @@ public class StudentAck implements Initializable {
     public void send(ActionEvent event){
         String message=msg.getText();
         System.out.println("This message is to be sent: "+message);
+        Dialog d = new Alert(Alert.AlertType.INFORMATION, "Message Sent Sucessfully");
+        d.show();
+        StudentHome.stage4.close();
     }
 
 }

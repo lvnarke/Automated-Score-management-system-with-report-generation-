@@ -21,8 +21,8 @@ import java.util.ResourceBundle;
 
 public class Home  implements Initializable{
 
-    Stage stage2 = new Stage();
-    Stage stage3 = new Stage();
+   static Stage stage2 = new Stage();
+   static Stage stage3 = new Stage();
     Connection conn;
     Statement st = null;
     public ComboBox comboBox;
@@ -62,7 +62,7 @@ public class Home  implements Initializable{
     }
 
     public void fun3(ActionEvent event) throws Exception {
-        stage3.close();
+       // Controller.stage7.close();
         System.out.println("OCR page");
         Parent root = FXMLLoader.load(getClass().getResource("screen4.fxml"));
         stage2.setScene(new Scene(root, 1108, 693));
@@ -72,7 +72,7 @@ public class Home  implements Initializable{
 
     }
     public void fun4(ActionEvent event) throws Exception {
-        stage2.close();
+       // Controller.stage7.close();
         System.out.println("Report page");
         Parent root = FXMLLoader.load(getClass().getResource("screen5.fxml"));
         stage3.setScene(new Scene(root, 1267, 653));

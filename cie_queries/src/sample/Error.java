@@ -35,8 +35,8 @@ public class Error implements Initializable {
     }
 
 
-    public void submit(ActionEvent event) {
-
+    public void submit(ActionEvent event) throws Exception{
+        Insert insert = new Insert();
         while ((b1 == false) || (b2 == false) || (b3 == false) || (b4 == false) || (b5 == false) || (b6 == false) || (b7 == false)) {
 
 
@@ -82,8 +82,14 @@ public class Error implements Initializable {
                 if (assignment > 10)
                     b7 = false;
             }
-        if(b1 && b2 && b3 && b4 && b5 && b6 && b7)
+        if(b1 && b2 && b3 && b4 && b5 && b6 && b7) {
+            insert.insertintoquiz(usn, ccode, quiz_1, quiz_2, quiz_3);
+            insert.insertintotest(usn, ccode, test_1, test_2, test_3);
+            insert.insertintoassgn(ccode, usn, assignment, lab, selfstudy);
+            System.out.println("Inserted");
+
             stage2.close();
+        }
 
         }
 
